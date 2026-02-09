@@ -11,80 +11,136 @@
 @plugin "tailwindcss-animate";
 @plugin "@tailwindcss/typography";
 
-/* define design tokens (light mode) */
+/* ═══════════════════════════════════════════════════════════
+   NEXUSCHAT — AURORA DESIGN SYSTEM
+   A violet-to-cyan gradient brand with deep space dark mode
+   and frosted glass light mode
+   ═══════════════════════════════════════════════════════════ */
+
+/* define design tokens (light mode — Frosted Aurora) */
 :root {
-  --background: hsl(0 0% 100%);
-  --foreground: hsl(240 10% 3.9%);
+  --background: hsl(228 30% 98%);
+  --foreground: hsl(230 25% 10%);
   --card: hsl(0 0% 100%);
-  --card-foreground: hsl(240 10% 3.9%);
+  --card-foreground: hsl(230 25% 10%);
   --popover: hsl(0 0% 100%);
-  --popover-foreground: hsl(240 10% 3.9%);
-  --primary: hsl(240 5.9% 10%);
-  --primary-foreground: hsl(0 0% 98%);
-  --secondary: hsl(240 4.8% 95.9%);
-  --secondary-foreground: hsl(240 5.9% 10%);
-  --muted: hsl(240 4.8% 95.9%);
-  --muted-foreground: hsl(240 3.8% 46.1%);
-  --accent: hsl(240 4.8% 95.9%);
-  --accent-foreground: hsl(240 5.9% 10%);
-  --destructive: hsl(0 84.2% 60.2%);
-  --destructive-foreground: hsl(0 0% 98%);
-  --border: hsl(240 5.9% 90%);
-  --input: hsl(240 5.9% 90%);
-  --ring: hsl(240 10% 3.9%);
-  --chart-1: hsl(12 76% 61%);
-  --chart-2: hsl(173 58% 39%);
-  --chart-3: hsl(197 37% 24%);
-  --chart-4: hsl(43 74% 66%);
-  --chart-5: hsl(27 87% 67%);
-  --sidebar-background: hsl(0 0% 98%);
-  --sidebar-foreground: hsl(240 5.3% 26.1%);
-  --sidebar-primary: hsl(240 5.9% 10%);
-  --sidebar-primary-foreground: hsl(0 0% 98%);
-  --sidebar-accent: hsl(240 4.8% 95.9%);
-  --sidebar-accent-foreground: hsl(240 5.9% 10%);
-  --sidebar-border: hsl(220 13% 91%);
-  --sidebar-ring: hsl(217.2 91.2% 59.8%);
+  --popover-foreground: hsl(230 25% 10%);
+  --primary: hsl(263 70% 50%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(228 25% 95%);
+  --secondary-foreground: hsl(230 25% 10%);
+  --muted: hsl(228 20% 94%);
+  --muted-foreground: hsl(228 12% 48%);
+  --accent: hsl(192 91% 36%);
+  --accent-foreground: hsl(0 0% 100%);
+  --destructive: hsl(0 72% 51%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(228 20% 89%);
+  --input: hsl(228 20% 89%);
+  --ring: hsl(263 70% 50%);
+  --chart-1: hsl(263 70% 50%);
+  --chart-2: hsl(192 91% 36%);
+  --chart-3: hsl(330 81% 60%);
+  --chart-4: hsl(160 84% 39%);
+  --chart-5: hsl(38 92% 50%);
+  --sidebar-background: hsl(228 30% 97%);
+  --sidebar-foreground: hsl(228 15% 30%);
+  --sidebar-primary: hsl(263 70% 50%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(263 60% 96%);
+  --sidebar-accent-foreground: hsl(263 70% 40%);
+  --sidebar-border: hsl(228 20% 91%);
+  --sidebar-ring: hsl(263 70% 50%);
   /* border radius unit */
-  --radius: 0.5rem;
-  --sidebar: hsl(0 0% 98%);
+  --radius: 0.625rem;
+  --sidebar: hsl(228 30% 97%);
+
+  /* NexusChat brand tokens */
+  --nexus-violet: hsl(263 70% 50%);
+  --nexus-violet-light: hsl(263 80% 65%);
+  --nexus-cyan: hsl(192 91% 36%);
+  --nexus-cyan-light: hsl(192 85% 50%);
+  --nexus-pink: hsl(330 81% 60%);
+  --nexus-emerald: hsl(160 84% 39%);
+  --nexus-amber: hsl(38 92% 50%);
+  --nexus-gradient: linear-gradient(135deg, hsl(263 70% 50%), hsl(192 91% 36%));
+  --nexus-gradient-warm: linear-gradient(135deg, hsl(263 70% 50%), hsl(330 81% 60%));
+  --nexus-surface-glass: rgba(255, 255, 255, 0.72);
+  --nexus-blur: 16px;
+
+  /* Spacing scale (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Layout dimensions */
+  --nav-rail-width: 72px;
+  --sidebar-width: 320px;
+  --thread-panel-width: 400px;
+  --input-min-height: 56px;
+  --input-max-height: 160px;
+  --message-max-width: 480px;
+  --avatar-sm: 32px;
+  --avatar-md: 40px;
+  --avatar-lg: 48px;
+  --bottom-nav-height: 64px;
 }
 
-/* define design tokens (dark mode) */
+/* define design tokens (dark mode — Deep Space Aurora) */
 .dark {
-  --background: hsl(240 10% 3.9%);
-  --foreground: hsl(0 0% 98%);
-  --card: hsl(240 10% 3.9%);
-  --card-foreground: hsl(0 0% 98%);
-  --popover: hsl(240 10% 3.9%);
-  --popover-foreground: hsl(0 0% 98%);
-  --primary: hsl(0 0% 98%);
-  --primary-foreground: hsl(240 5.9% 10%);
-  --secondary: hsl(240 3.7% 15.9%);
-  --secondary-foreground: hsl(0 0% 98%);
-  --muted: hsl(240 3.7% 15.9%);
-  --muted-foreground: hsl(240 5% 64.9%);
-  --accent: hsl(240 3.7% 15.9%);
-  --accent-foreground: hsl(0 0% 98%);
-  --destructive: hsl(0 62.8% 30.6%);
-  --destructive-foreground: hsl(0 0% 98%);
-  --border: hsl(240 3.7% 15.9%);
-  --input: hsl(240 3.7% 15.9%);
-  --ring: hsl(240 4.9% 83.9%);
-  --chart-1: hsl(220 70% 50%);
-  --chart-2: hsl(160 60% 45%);
-  --chart-3: hsl(30 80% 55%);
-  --chart-4: hsl(280 65% 60%);
-  --chart-5: hsl(340 75% 55%);
-  --sidebar-background: hsl(240 5.9% 10%);
-  --sidebar-foreground: hsl(240 4.8% 95.9%);
-  --sidebar-primary: hsl(224.3 76.3% 48%);
+  --background: hsl(232 30% 5%);
+  --foreground: hsl(225 25% 95%);
+  --card: hsl(232 26% 8%);
+  --card-foreground: hsl(225 25% 95%);
+  --popover: hsl(232 26% 8%);
+  --popover-foreground: hsl(225 25% 95%);
+  --primary: hsl(263 70% 58%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(232 22% 13%);
+  --secondary-foreground: hsl(225 25% 95%);
+  --muted: hsl(232 20% 14%);
+  --muted-foreground: hsl(228 12% 55%);
+  --accent: hsl(192 85% 45%);
+  --accent-foreground: hsl(0 0% 100%);
+  --destructive: hsl(0 63% 45%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(232 18% 16%);
+  --input: hsl(232 18% 16%);
+  --ring: hsl(263 70% 58%);
+  --chart-1: hsl(263 80% 65%);
+  --chart-2: hsl(192 85% 50%);
+  --chart-3: hsl(330 81% 65%);
+  --chart-4: hsl(160 72% 50%);
+  --chart-5: hsl(38 92% 55%);
+  --sidebar-background: hsl(232 28% 7%);
+  --sidebar-foreground: hsl(228 15% 75%);
+  --sidebar-primary: hsl(263 70% 58%);
   --sidebar-primary-foreground: hsl(0 0% 100%);
-  --sidebar-accent: hsl(240 3.7% 15.9%);
-  --sidebar-accent-foreground: hsl(240 4.8% 95.9%);
-  --sidebar-border: hsl(240 3.7% 15.9%);
-  --sidebar-ring: hsl(217.2 91.2% 59.8%);
-  --sidebar: hsl(240 5.9% 10%);
+  --sidebar-accent: hsl(263 40% 15%);
+  --sidebar-accent-foreground: hsl(263 80% 80%);
+  --sidebar-border: hsl(232 18% 14%);
+  --sidebar-ring: hsl(263 70% 58%);
+  --sidebar: hsl(232 28% 7%);
+
+  /* NexusChat dark brand tokens */
+  --nexus-violet: hsl(263 80% 65%);
+  --nexus-violet-light: hsl(263 85% 75%);
+  --nexus-cyan: hsl(192 85% 50%);
+  --nexus-cyan-light: hsl(192 80% 60%);
+  --nexus-pink: hsl(330 81% 65%);
+  --nexus-emerald: hsl(160 72% 50%);
+  --nexus-amber: hsl(38 92% 55%);
+  --nexus-gradient: linear-gradient(135deg, hsl(263 80% 65%), hsl(192 85% 50%));
+  --nexus-gradient-warm: linear-gradient(135deg, hsl(263 80% 65%), hsl(330 81% 65%));
+  --nexus-surface-glass: rgba(15, 17, 25, 0.78);
+  --nexus-blur: 20px;
 }
 
 /* define theme */
@@ -295,6 +351,129 @@
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--border) transparent;
+}
+
+/* ═══════════════════════════════════════
+   NEXUSCHAT COMPONENT STYLES
+   ═══════════════════════════════════════ */
+
+/* Aurora gradient text */
+.nexus-gradient-text {
+  background: var(--nexus-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism surface */
+.nexus-glass {
+  background: var(--nexus-surface-glass);
+  backdrop-filter: blur(var(--nexus-blur));
+  -webkit-backdrop-filter: blur(var(--nexus-blur));
+}
+
+/* Glow effect for primary actions */
+.nexus-glow {
+  box-shadow: 0 0 20px -4px hsl(263 70% 50% / 0.35);
+}
+.dark .nexus-glow {
+  box-shadow: 0 0 24px -4px hsl(263 80% 65% / 0.4);
+}
+
+/* Message bubble tails */
+.nexus-bubble-sent {
+  border-radius: 20px 20px 4px 20px;
+}
+.nexus-bubble-received {
+  border-radius: 20px 20px 20px 4px;
+}
+
+/* Typing indicator dots animation */
+@keyframes nexus-typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-6px); }
+}
+.nexus-typing-dot {
+  animation: nexus-typing-bounce 1.4s infinite ease-in-out;
+}
+.nexus-typing-dot:nth-child(2) { animation-delay: 0.15s; }
+.nexus-typing-dot:nth-child(3) { animation-delay: 0.3s; }
+
+/* Pulse ring for voice rooms */
+@keyframes nexus-pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  70% { transform: scale(1.15); opacity: 0; }
+  100% { transform: scale(0.9); opacity: 0; }
+}
+.nexus-pulse-ring {
+  animation: nexus-pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Message entry animation */
+@keyframes nexus-msg-in {
+  0% { opacity: 0; transform: translateY(12px) scale(0.97); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.nexus-msg-enter {
+  animation: nexus-msg-in 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Slide-up panel animation */
+@keyframes nexus-slide-up {
+  0% { opacity: 0; transform: translateY(100%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.nexus-slide-up {
+  animation: nexus-slide-up 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Privacy shield shimmer */
+@keyframes nexus-shield-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.nexus-shield-shimmer {
+  background: linear-gradient(90deg, transparent, hsl(160 84% 39% / 0.15), transparent);
+  background-size: 200% 100%;
+  animation: nexus-shield-shimmer 3s ease-in-out infinite;
+}
+
+/* Encryption lock icon pulse */
+@keyframes nexus-lock-pulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* Navigation rail active indicator */
+.nexus-nav-indicator {
+  position: relative;
+}
+.nexus-nav-indicator::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 20px;
+  border-radius: 0 3px 3px 0;
+  background: var(--nexus-gradient);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.nexus-nav-indicator[data-active="true"]::before {
+  opacity: 1;
+}
+
+/* Online presence dot */
+.nexus-online-dot {
+  box-shadow: 0 0 0 2.5px var(--background);
+}
+
+/* Reaction pill hover effect */
+.nexus-reaction:hover {
+  transform: scale(1.12);
+  transition: transform 0.15s ease;
 }
 
 @theme inline {
