@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { connection } from "next/server";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "sonner";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -8,8 +9,8 @@ import { SessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://chat.vercel.ai"),
-  title: "Next.js Chatbot Template",
-  description: "Next.js chatbot template using the AI SDK.",
+  title: "Nak Tahu AI — Malaysia's AI | Speak Malaysian, Think Lokal",
+  description: "Nak Tahu AI is Malaysia's AI assistant that understands Bahasa Melayu, English, and Manglish. Speak Malaysian, Think Lokal.",
 };
 
 export const viewport = {
