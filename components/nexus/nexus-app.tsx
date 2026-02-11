@@ -38,11 +38,7 @@ import { AISearch } from "./ai-search";
 export function NexusApp() {
   const [activeSection, setActiveSection] = React.useState<NavSection>("chats");
   const [activeChatId, setActiveChatId] = React.useState<string | undefined>("1");
-<<<<<<< HEAD
   const [activeFolder, setActiveFolder] = React.useState<string | undefined>(undefined);
-=======
-  const [activeFolder, setActiveFolder] = React.useState<string | null>(null);
->>>>>>> f4b75fd22a6a7c19d67da194e142b01f8c9e7a77
   const [showChat, setShowChat] = React.useState(false); // mobile: toggle sidebar/chat
 
   const handleChatSelect = (chatId: string) => {
@@ -78,11 +74,7 @@ export function NexusApp() {
           <>
             <ChatFolders
               activeFolder={activeFolder}
-<<<<<<< HEAD
               onFolderSelect={(id) => setActiveFolder(id ?? undefined)}
-=======
-              onFolderSelect={setActiveFolder}
->>>>>>> f4b75fd22a6a7c19d67da194e142b01f8c9e7a77
             />
             <ChatSidebar
               activeSection={activeSection}

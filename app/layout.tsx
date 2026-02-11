@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { connection } from "next/server";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ClientProviders } from "@/components/client-providers";
 
@@ -47,12 +46,11 @@ const THEME_COLOR_SCRIPT = `\
   updateThemeColor();
 })();`;
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  await connection();
   return (
     <html
       className={`${geist.variable} ${geistMono.variable}`}
