@@ -1,3 +1,16 @@
+/**
+ * @fileoverview Hook for managing artifact/document state.
+ *
+ * Provides two hooks:
+ * - `useArtifactSelector` — Subscribes to a derived slice of the current artifact
+ *   state via a selector function, backed by SWR for client-side caching.
+ * - `useArtifact` — Returns the full artifact object along with setters for both
+ *   the artifact data and its associated metadata. Supports editing mode,
+ *   version history, visibility, and bounding-box positioning.
+ *
+ * State is stored in the SWR cache under the key "artifact" so it can be shared
+ * across components without prop-drilling.
+ */
 "use client";
 
 import { useCallback, useMemo } from "react";

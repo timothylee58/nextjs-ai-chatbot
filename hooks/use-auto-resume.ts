@@ -1,3 +1,13 @@
+/**
+ * @fileoverview Hook that automatically reconnects to an in-progress AI stream
+ * after a page navigation or refresh.
+ *
+ * When `autoResume` is true and the most recent message was sent by the user,
+ * the hook calls `resumeStream` to re-attach to the server-sent event stream
+ * (typically served by `/api/chat/[id]/stream`). It also listens to the
+ * `DataStreamProvider` for any `data-appendMessage` events and merges those
+ * messages back into the conversation so the UI stays in sync.
+ */
 "use client";
 
 import type { UseChatHelpers } from "@ai-sdk/react";

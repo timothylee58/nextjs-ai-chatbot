@@ -1,3 +1,13 @@
+/**
+ * @file suggestions.tsx
+ * @description Editor suggestion highlighting and interaction system. Provides
+ * functions to project database suggestions onto document positions (finding text
+ * ranges in the ProseMirror doc), create interactive suggestion widgets (with
+ * apply/dismiss actions that modify the document), and a ProseMirror plugin
+ * (suggestionsPlugin) that manages suggestion decoration state across editor
+ * transactions. The UISuggestion type extends the DB Suggestion with positional data.
+ */
+
 import type { Node } from "prosemirror-model";
 import { Plugin, PluginKey } from "prosemirror-state";
 import {

@@ -1,5 +1,10 @@
 "use client"
 
+/**
+ * @module Separator
+ * @description Visual divider line built on Radix UI Separator.
+ * Supports horizontal and vertical orientations.
+ */
 import * as React from "react"
 import { Separator as SeparatorPrimitive } from "radix-ui"
 

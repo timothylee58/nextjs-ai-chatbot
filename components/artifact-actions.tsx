@@ -1,3 +1,9 @@
+/**
+ * @module artifact-actions
+ * @description Action buttons for the artifact panel. Provides controls such as
+ * copy to clipboard, version navigation (previous/next), and other
+ * artifact-specific actions rendered in the artifact toolbar.
+ */
 import { type Dispatch, memo, type SetStateAction, useState } from "react";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";

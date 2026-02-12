@@ -1,3 +1,12 @@
+/**
+ * @file request-suggestions.ts
+ * @description AI tool definition for generating edit suggestions on an existing
+ * document. When invoked, it fetches the document by ID, uses the artifact model
+ * to stream up to 5 writing improvement suggestions (original vs. suggested sentence
+ * pairs with descriptions), pushes each suggestion to the client in real-time via
+ * the data stream, and persists them to the database for later retrieval.
+ */
+
 import { Output, streamText, tool, type UIMessageStreamWriter } from "ai";
 import type { Session } from "next-auth";
 import { z } from "zod";

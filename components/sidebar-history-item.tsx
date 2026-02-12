@@ -1,3 +1,9 @@
+/**
+ * @module sidebar-history-item
+ * @description Single chat history item in the sidebar. Renders a conversation
+ * entry with rename and delete actions, active state highlighting, and
+ * visibility controls via a dropdown menu.
+ */
 import Link from "next/link";
 import { memo } from "react";
 import { useChatVisibility } from "@/hooks/use-chat-visibility";

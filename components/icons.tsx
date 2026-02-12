@@ -1,3 +1,9 @@
+/**
+ * @module icons
+ * @description SVG icon components used throughout the application. Exports a
+ * collection of reusable icon components for UI elements such as buttons,
+ * navigation, status indicators, and toolbar actions.
+ */
 export const BotIcon = () => {
   return (
     <svg

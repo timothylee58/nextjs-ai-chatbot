@@ -1,3 +1,27 @@
+/**
+ * @fileoverview Main Chat API (route: POST /api/chat, DELETE /api/chat)
+ *
+ * The core AI streaming endpoint for the chat application.
+ *
+ * **POST** flow:
+ * 1. Validates the request body against {@link postRequestBodySchema}.
+ * 2. Authenticates the user and enforces daily message rate limits based on
+ *    user entitlements.
+ * 3. Creates a new chat (with parallel title generation) or loads an existing
+ *    one, verifying ownership.
+ * 4. Streams an AI response using the selected language model with available
+ *    tools (weather, document creation/update, suggestions).
+ * 5. Supports both normal message flow and tool-approval continuation flow.
+ * 6. Saves all assistant/tool messages to the database on stream completion.
+ * 7. Uses Redis-backed resumable streams (when available) for SSR recovery
+ *    after page navigation.
+ *
+ * **DELETE** flow:
+ * Removes a chat by ID after verifying the authenticated user owns it.
+ *
+ * @module app/(chat)/api/chat/route
+ */
+
 import { geolocation } from "@vercel/functions";
 import {
   convertToModelMessages,

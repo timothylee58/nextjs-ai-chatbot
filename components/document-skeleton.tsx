@@ -1,3 +1,9 @@
+/**
+ * @module document-skeleton
+ * @description Loading skeleton placeholder for documents. Renders animated
+ * placeholder shapes that mimic the layout of different artifact kinds (text,
+ * code, sheet) while content is being loaded or streamed.
+ */
 "use client";
 
 import type { ArtifactKind } from "./artifact";

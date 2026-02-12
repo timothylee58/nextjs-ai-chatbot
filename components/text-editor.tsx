@@ -1,3 +1,9 @@
+/**
+ * @module text-editor
+ * @description ProseMirror-based rich text editor for text artifacts. Provides
+ * a WYSIWYG editing experience with markdown-like input rules, suggestion
+ * overlays, and support for streaming content updates from the AI.
+ */
 "use client";
 
 import { exampleSetup } from "prosemirror-example-setup";

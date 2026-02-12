@@ -1,3 +1,9 @@
+/**
+ * @module document
+ * @description Document renderer component. Displays text, code, or sheet
+ * artifacts with appropriate controls including a toolbar for toggling between
+ * chat and editor views, and handles loading/streaming states.
+ */
 import { memo } from "react";
 import { toast } from "sonner";
 import { useArtifact } from "@/hooks/use-artifact";

@@ -1,3 +1,9 @@
+/**
+ * @module code-editor
+ * @description CodeMirror-based code editor for code artifacts. Provides syntax
+ * highlighting, theme support, and controlled editing with change callbacks.
+ * Supports streaming content updates and suggestion overlays.
+ */
 "use client";
 
 import { python } from "@codemirror/lang-python";

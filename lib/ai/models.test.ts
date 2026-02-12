@@ -1,3 +1,11 @@
+/**
+ * @file models.test.ts
+ * @description Mock AI model instances used by Playwright end-to-end tests. Uses
+ * the AI SDK's MockLanguageModelV3 and simulateReadableStream to create deterministic
+ * test models (chatModel, reasoningModel, titleModel, artifactModel) that return
+ * prompt-driven responses from the test prompt utilities.
+ */
+
 import { simulateReadableStream } from "ai";
 import { MockLanguageModelV3 } from "ai/test";
 import { getResponseChunksByPrompt } from "@/tests/prompts/utils";

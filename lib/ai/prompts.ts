@@ -1,3 +1,13 @@
+/**
+ * @file prompts.ts
+ * @description System prompts and prompt templates for the AI chat assistant. Contains
+ * the main regularPrompt (Nak Tahu AI Malaysian persona), the artifactsPrompt (rules
+ * for creating/updating documents), code and sheet generation prompts, the
+ * updateDocumentPrompt factory, the titlePrompt for auto-generating chat titles,
+ * and the systemPrompt composer that assembles the final system prompt based on
+ * the selected model and request geolocation hints.
+ */
+
 import type { Geo } from "@vercel/functions";
 import type { ArtifactKind } from "@/components/artifact";
 

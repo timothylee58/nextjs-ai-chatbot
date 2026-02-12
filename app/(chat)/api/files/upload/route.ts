@@ -1,3 +1,19 @@
+/**
+ * @fileoverview File Upload API (route: POST /api/files/upload)
+ *
+ * Handles image file uploads for the chat application. Accepts multipart
+ * form data with a single "file" field. Validates the upload using Zod:
+ * - File size must be 5 MB or less.
+ * - File type must be JPEG or PNG.
+ *
+ * Uploads the validated file to Vercel Blob storage with public access and
+ * returns the blob metadata (including the public URL) in the response.
+ *
+ * Requires authentication.
+ *
+ * @module app/(chat)/api/files/upload/route
+ */
+
 import { put } from "@vercel/blob";
 import { NextResponse } from "next/server";
 import { z } from "zod";

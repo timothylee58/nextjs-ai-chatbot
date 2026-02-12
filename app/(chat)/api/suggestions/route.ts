@@ -1,3 +1,17 @@
+/**
+ * @fileoverview Suggestions API (route: GET /api/suggestions)
+ *
+ * Returns AI-generated edit suggestions for a specific document, identified
+ * by the `documentId` query parameter. Used by the document editor to display
+ * inline improvement suggestions to the user.
+ *
+ * Requires authentication and verifies that the requesting user owns the
+ * suggestions (based on the userId of the first suggestion found).
+ * Returns an empty array if no suggestions exist for the document.
+ *
+ * @module app/(chat)/api/suggestions/route
+ */
+
 import { auth } from "@/app/(auth)/auth";
 import { getSuggestionsByDocumentId } from "@/lib/db/queries";
 import { ChatSDKError } from "@/lib/errors";

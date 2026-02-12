@@ -1,3 +1,12 @@
+/**
+ * @file types.ts
+ * @description Shared TypeScript type definitions used across the application. Defines
+ * the core chat message types including DataPart, MessageMetadata, ChatTools (weather,
+ * createDocument, updateDocument, requestSuggestions), custom UI data types for
+ * real-time streaming (text/image/sheet/code deltas, suggestions, etc.), the ChatMessage
+ * type built on top of the AI SDK's UIMessage, and the Attachment type for file uploads.
+ */
+
 import type { InferUITool, UIMessage } from "ai";
 import { z } from "zod";
 import type { ArtifactKind } from "@/components/artifact";

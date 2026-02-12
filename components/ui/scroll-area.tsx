@@ -1,5 +1,10 @@
 "use client"
 
+/**
+ * @module ScrollArea
+ * @description Custom scrollable area with styled scrollbars, built on Radix UI.
+ * Provides consistent cross-browser scroll behavior.
+ */
 import * as React from "react"
 import { ScrollArea as ScrollAreaPrimitive } from "radix-ui"
 

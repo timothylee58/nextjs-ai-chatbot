@@ -1,5 +1,10 @@
 "use client";
 
+/**
+ * @module AlertDialog
+ * @description Modal confirmation dialog built on Radix UI AlertDialog.
+ * Used for destructive or important actions requiring user confirmation.
+ */
 import { AlertDialog as AlertDialogPrimitive } from "radix-ui";
 import * as React from "react";
 import { buttonVariants } from "@/components/ui/button";

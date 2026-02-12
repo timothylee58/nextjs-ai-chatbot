@@ -1,3 +1,9 @@
+/**
+ * @module artifact-messages
+ * @description Displays the chat messages related to the current artifact.
+ * Renders a filtered subset of the conversation that pertains to the active
+ * artifact, shown alongside the artifact panel.
+ */
 import type { UseChatHelpers } from "@ai-sdk/react";
 import equal from "fast-deep-equal";
 import { AnimatePresence, motion } from "framer-motion";

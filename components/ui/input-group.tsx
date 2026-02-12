@@ -1,5 +1,10 @@
 "use client"
 
+/**
+ * @module InputGroup
+ * @description Grouped input with label, description, and message slots.
+ * Wraps input elements with consistent layout and styling.
+ */
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 

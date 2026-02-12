@@ -1,3 +1,12 @@
+/**
+ * @file migrate.ts
+ * @description Database migration runner script. Loads environment variables from
+ * .env.local, connects to PostgreSQL using the POSTGRES_URL, and executes all
+ * pending Drizzle ORM migrations from the lib/db/migrations folder. Gracefully
+ * skips migration if POSTGRES_URL is not defined (e.g., during static builds).
+ * Intended to be run as a standalone script during the build process.
+ */
+
 import { config } from "dotenv";
 import { drizzle } from "drizzle-orm/postgres-js";
 import { migrate } from "drizzle-orm/postgres-js/migrator";

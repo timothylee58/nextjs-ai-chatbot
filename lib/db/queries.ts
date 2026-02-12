@@ -1,3 +1,16 @@
+/**
+ * @file queries.ts
+ * @description All database query functions for the application. Provides CRUD
+ * operations for users (getUser, createUser, createGuestUser), chats (saveChat,
+ * getChatById, getChatsByUserId, deleteChatById, deleteAllChatsByUserId,
+ * updateChatVisibilityById, updateChatTitleById), messages (saveMessages,
+ * updateMessage, getMessagesByChatId, getMessageById, getMessageCountByUserId,
+ * deleteMessagesByChatIdAfterTimestamp), documents (saveDocument, getDocumentsById,
+ * getDocumentById, deleteDocumentsByIdAfterTimestamp), suggestions (saveSuggestions,
+ * getSuggestionsByDocumentId), votes (voteMessage, getVotesByChatId), and streams
+ * (createStreamId, getStreamIdsByChatId). Uses Drizzle ORM with PostgreSQL.
+ */
+
 import "server-only";
 
 import {

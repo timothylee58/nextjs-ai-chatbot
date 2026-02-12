@@ -1,3 +1,8 @@
+/**
+ * @module sidebar-toggle
+ * @description Button to toggle the sidebar open and closed. Wraps the sidebar
+ * trigger with a tooltip and keyboard shortcut hint (Cmd+B / Ctrl+B).
+ */
 import type { ComponentProps } from "react";
 
 import { type SidebarTrigger, useSidebar } from "@/components/ui/sidebar";

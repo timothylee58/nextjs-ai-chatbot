@@ -1,3 +1,16 @@
+/**
+ * @fileoverview Existing Chat Page (route: /chat/[id])
+ *
+ * Loads an existing chat conversation from the database by its ID. Performs
+ * authentication and authorization checks -- redirects unauthenticated users
+ * to the guest auth endpoint, and returns 404 for private chats not owned by
+ * the current user. Converts stored DB messages to the UI message format and
+ * renders the Chat component with autoResume enabled (to reconnect to any
+ * in-progress AI stream) alongside a DataStreamHandler.
+ *
+ * @module app/(chat)/chat/[id]/page
+ */
+
 import { cookies } from "next/headers";
 import { notFound, redirect } from "next/navigation";
 import { Suspense } from "react";

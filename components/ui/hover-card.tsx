@@ -1,5 +1,10 @@
 "use client"
 
+/**
+ * @module HoverCard
+ * @description Card popover that appears on hover, built on Radix UI.
+ * Useful for previewing content without navigation.
+ */
 import * as React from "react"
 import { HoverCard as HoverCardPrimitive } from "radix-ui"
 

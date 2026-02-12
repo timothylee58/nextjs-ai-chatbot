@@ -1,5 +1,10 @@
 "use client"
 
+/**
+ * @module Select
+ * @description Dropdown select input built on Radix UI Select.
+ * Includes trigger, content, items, groups, labels, and separators.
+ */
 import * as React from "react"
 import { Select as SelectPrimitive } from "radix-ui"
 import { Check, ChevronDown, ChevronUp } from "lucide-react"

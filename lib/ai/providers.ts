@@ -1,3 +1,13 @@
+/**
+ * @file providers.ts
+ * @description AI provider configuration and model resolution. Sets up the Vercel AI
+ * Gateway as the primary LLM provider and provides helper functions to resolve model
+ * instances: getLanguageModel (resolves a model ID, applying reasoning middleware for
+ * thinking models), getTitleModel (returns the model used for chat title generation),
+ * and getArtifactModel (returns the model used for artifact/document operations).
+ * In test environments, all models are swapped with mock implementations.
+ */
+
 import { gateway } from "@ai-sdk/gateway";
 import {
   customProvider,

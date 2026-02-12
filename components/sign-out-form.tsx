@@ -1,3 +1,8 @@
+/**
+ * @module sign-out-form
+ * @description Sign out form/button component. Renders a server-action form
+ * that triggers the authentication sign-out flow when submitted.
+ */
 import Form from "next/form";
 
 import { signOut } from "@/app/(auth)/auth";

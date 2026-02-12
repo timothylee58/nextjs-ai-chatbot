@@ -1,5 +1,10 @@
 "use client"
 
+/**
+ * @module DropdownMenu
+ * @description Dropdown menu built on Radix UI with items, separators,
+ * checkbox/radio items, and sub-menu support.
+ */
 import * as React from "react"
 import { DropdownMenu as DropdownMenuPrimitive } from "radix-ui"
 import { Check, ChevronRight, Circle } from "lucide-react"

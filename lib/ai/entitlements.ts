@@ -1,3 +1,11 @@
+/**
+ * @file entitlements.ts
+ * @description Defines rate limits and feature entitlements per user type. Maps each
+ * user type (guest, regular) to its allowed quotas, such as the maximum number of
+ * messages per day. Used by the chat API to enforce usage limits before processing
+ * a new message.
+ */
+
 import type { UserType } from "@/app/(auth)/auth";
 
 type Entitlements = {

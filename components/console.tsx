@@ -1,3 +1,9 @@
+/**
+ * @module console
+ * @description Console output panel for code execution results. Displays stdout,
+ * stderr, and execution status from running code artifacts, with a collapsible
+ * interface and auto-scroll behavior.
+ */
 import {
   type Dispatch,
   type SetStateAction,

@@ -1,3 +1,19 @@
+/**
+ * @fileoverview Message Voting API (route: /api/vote)
+ *
+ * Provides endpoints for user feedback on AI-generated messages:
+ *
+ * - **GET** - Returns all votes for a given chat (by `chatId` query param).
+ *   Requires the authenticated user to own the chat.
+ * - **PATCH** - Records a thumbs-up or thumbs-down vote on a specific message.
+ *   Accepts `chatId`, `messageId`, and `type` ("up" or "down") in the request
+ *   body. Requires the authenticated user to own the chat.
+ *
+ * Used by the chat UI to collect user feedback on AI response quality.
+ *
+ * @module app/(chat)/api/vote/route
+ */
+
 import { auth } from "@/app/(auth)/auth";
 import { getChatById, getVotesByChatId, voteMessage } from "@/lib/db/queries";
 import { ChatSDKError } from "@/lib/errors";

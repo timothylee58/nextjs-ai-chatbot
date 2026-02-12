@@ -1,3 +1,13 @@
+/**
+ * @file schema.ts
+ * @description Drizzle ORM schema definitions for all database tables. Defines the
+ * User, Chat, Message (v2 with parts-based format), Vote (v2), Document (versioned
+ * with composite primary key), Suggestion (with foreign key to Document), and Stream
+ * tables. Also includes deprecated Message and Vote schemas (v1) for backward
+ * compatibility during migration. Exports both table definitions and inferred
+ * TypeScript types for each model.
+ */
+
 import type { InferSelectModel } from "drizzle-orm";
 import {
   boolean,

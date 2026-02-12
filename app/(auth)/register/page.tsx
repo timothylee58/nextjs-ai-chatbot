@@ -1,3 +1,12 @@
+/**
+ * Registration Page — app/(auth)/register/page.tsx
+ *
+ * Client component that renders the sign-up form.
+ * Uses React 19's useActionState() to call the register server action.
+ *
+ * Flow: validate form → create user in DB → auto sign-in → redirect to home.
+ * Handles edge cases: duplicate email, validation errors, server failures.
+ */
 "use client";
 
 import Link from "next/link";

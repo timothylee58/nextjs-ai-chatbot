@@ -1,3 +1,8 @@
+/**
+ * @module artifact-close-button
+ * @description Close button for the artifact panel. Resets the artifact state
+ * back to its initial values and dismisses the artifact side panel.
+ */
 import { memo } from "react";
 import { initialArtifactData, useArtifact } from "@/hooks/use-artifact";
 import { CrossIcon } from "./icons";

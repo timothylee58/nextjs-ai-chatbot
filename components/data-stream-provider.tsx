@@ -1,3 +1,11 @@
+/**
+ * @file data-stream-provider.tsx
+ * @description Data stream React context. Provides a shared context for the AI
+ * response stream so multiple components (chat, artifacts, sidebar) can react
+ * to the same stream events. Exposes the DataStreamProvider wrapper and a
+ * useDataStream hook for consuming the stream state.
+ */
+
 "use client";
 
 import type { DataUIPart } from "ai";

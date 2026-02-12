@@ -1,3 +1,9 @@
+/**
+ * @module create-artifact
+ * @description Defines the artifact creation framework and artifact kind registry.
+ * Provides type definitions, context interfaces, and the initialization UI shown
+ * when a new artifact is being created during a chat session.
+ */
 import type { UseChatHelpers } from "@ai-sdk/react";
 import type { DataUIPart } from "ai";
 import type { ComponentType, Dispatch, ReactNode, SetStateAction } from "react";

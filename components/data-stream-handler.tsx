@@ -1,3 +1,12 @@
+/**
+ * @file data-stream-handler.tsx
+ * @description Data stream event handler. Listens to the DataStreamProvider's
+ * SSE stream and dispatches events (new messages, title updates, artifact
+ * creation) to the appropriate state managers. Processes incoming deltas to
+ * update artifact state (document ID, title, kind, content) and triggers SWR
+ * cache mutations for chat history when title changes arrive.
+ */
+
 "use client";
 
 import { useEffect } from "react";

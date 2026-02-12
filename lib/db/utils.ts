@@ -1,3 +1,11 @@
+/**
+ * @file utils.ts
+ * @description Database utility functions for password hashing. Provides
+ * generateHashedPassword (hashes a password using bcrypt with a salt) and
+ * generateDummyPassword (generates a random password and hashes it, used for
+ * timing-safe authentication comparisons to prevent user enumeration attacks).
+ */
+
 import { generateId } from "ai";
 import { genSaltSync, hashSync } from "bcrypt-ts";
 

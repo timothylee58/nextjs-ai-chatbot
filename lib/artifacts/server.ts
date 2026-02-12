@@ -1,3 +1,12 @@
+/**
+ * @file server.ts
+ * @description Server-side artifact/document operations and handler registry. Defines
+ * the DocumentHandler interface and createDocumentHandler factory function that wraps
+ * create/update callbacks with automatic document persistence. Registers all supported
+ * artifact kinds (text, code, sheet) in the documentHandlersByArtifactKind array,
+ * and exports the artifactKinds tuple used for Zod schema validation in AI tools.
+ */
+
 import type { UIMessageStreamWriter } from "ai";
 import type { Session } from "next-auth";
 import { codeDocumentHandler } from "@/artifacts/code/server";

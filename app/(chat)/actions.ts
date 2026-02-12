@@ -1,3 +1,20 @@
+/**
+ * @fileoverview Chat Server Actions
+ *
+ * Contains Next.js server actions used by the chat UI:
+ *
+ * - {@link saveChatModelAsCookie} - Persists the user's preferred AI model
+ *   selection as a cookie for future sessions.
+ * - {@link generateTitleFromUserMessage} - Uses AI (via the title model) to
+ *   generate a concise chat title from the user's first message.
+ * - {@link deleteTrailingMessages} - Removes all messages in a chat after a
+ *   given message's timestamp, used for edit/retry workflows.
+ * - {@link updateChatVisibility} - Toggles a chat's visibility between
+ *   "public" and "private".
+ *
+ * @module app/(chat)/actions
+ */
+
 "use server";
 
 import { generateText, type UIMessage } from "ai";

@@ -1,3 +1,12 @@
+/**
+ * @file create-document.ts
+ * @description AI tool definition for creating a new document/artifact. When the AI
+ * decides to create a document, this tool generates a unique ID, streams metadata
+ * (kind, id, title) to the client via the data stream, delegates content generation
+ * to the appropriate document handler based on artifact kind (text, code, sheet),
+ * and signals completion. The created document is persisted server-side by the handler.
+ */
+
 import { tool, type UIMessageStreamWriter } from "ai";
 import type { Session } from "next-auth";
 import { z } from "zod";

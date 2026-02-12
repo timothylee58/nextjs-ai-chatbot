@@ -1,3 +1,10 @@
+/**
+ * @module artifact
+ * @description Artifact panel component. Displays AI-generated document, code,
+ * or sheet artifacts in a side panel with version history, undo/redo controls,
+ * and copy actions. Manages artifact state and renders the appropriate editor
+ * based on the artifact kind.
+ */
 import type { UseChatHelpers } from "@ai-sdk/react";
 import { formatDistance } from "date-fns";
 import equal from "fast-deep-equal";

@@ -1,3 +1,8 @@
+/**
+ * @module Badge
+ * @description Small label/tag component with variant styles.
+ * Supports default, secondary, destructive, and outline variants.
+ */
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 

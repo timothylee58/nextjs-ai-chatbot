@@ -1,3 +1,8 @@
+/**
+ * @module Card
+ * @description Card container component with composable Header, Title,
+ * Description, Content, and Footer sub-components.
+ */
 import * as React from "react";
 
 import { cn } from "@/lib/utils";

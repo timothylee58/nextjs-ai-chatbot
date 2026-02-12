@@ -1,3 +1,13 @@
+/**
+ * @file utils.ts
+ * @description General-purpose utility functions used throughout the application.
+ * Includes cn() for merging Tailwind CSS class names, fetcher/fetchWithErrorHandlers
+ * for HTTP requests with structured error handling, getLocalStorage for safe
+ * browser storage access, generateUUID for creating v4 UUIDs, and several message
+ * helper functions: getMostRecentUserMessage, getTrailingMessageId, sanitizeText,
+ * convertToUIMessages (converts DB messages to UI format), and getTextFromMessage.
+ */
+
 import type {
   AssistantModelMessage,
   ToolModelMessage,

@@ -1,3 +1,9 @@
+/**
+ * @module sidebar-history
+ * @description Chat history list in the sidebar. Displays previous conversations
+ * grouped by time period (today, yesterday, last week, last month, older) with
+ * loading states and empty state handling.
+ */
 "use client";
 
 import { isToday, isYesterday, subMonths, subWeeks } from "date-fns";

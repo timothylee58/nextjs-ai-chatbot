@@ -1,3 +1,9 @@
+/**
+ * @module sidebar-user-nav
+ * @description User navigation component in the sidebar footer. Displays the
+ * user's avatar and email with a dropdown menu for theme toggling and signing
+ * out of the application.
+ */
 "use client";
 
 import { ChevronUp } from "lucide-react";

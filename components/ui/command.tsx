@@ -1,5 +1,10 @@
 "use client"
 
+/**
+ * @module Command
+ * @description Command palette / searchable input built on cmdk.
+ * Supports grouped items, shortcuts, and dialog mode.
+ */
 import * as React from "react"
 import { type DialogProps } from "@radix-ui/react-dialog"
 import { Command as CommandPrimitive } from "cmdk"

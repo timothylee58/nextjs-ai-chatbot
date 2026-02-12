@@ -1,3 +1,13 @@
+/**
+ * @file nexus-types.ts
+ * @description TypeScript type definitions for the NexusChat feature. Covers the full
+ * data model including users and presence status, messages with reactions/attachments/
+ * threads/translations, chat conversations (direct, group, channel, community), AI
+ * features (summaries, smart replies, tone analysis, semantic search), communities
+ * with categories and channels, polls, events, voice/video calls, end-to-end
+ * encryption status, screenshot alerts, reminders, bookmarks, and navigation sections.
+ */
+
 // ═══════════════════════════════════════════════════════════
 // NEXUSCHAT — Core Type Definitions
 // ═══════════════════════════════════════════════════════════

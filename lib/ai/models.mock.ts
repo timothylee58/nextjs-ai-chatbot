@@ -1,3 +1,11 @@
+/**
+ * @file models.mock.ts
+ * @description Mock AI model implementations for development and manual testing.
+ * Provides mock versions of the chat model, reasoning model, title model, and
+ * artifact model that return canned responses without making real API calls.
+ * The mock models support both generate and stream modes with simulated delays.
+ */
+
 import type { LanguageModel } from "ai";
 
 const mockResponses: Record<string, string> = {

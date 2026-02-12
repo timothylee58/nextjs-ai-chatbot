@@ -1,5 +1,10 @@
 "use client"
 
+/**
+ * @module Carousel
+ * @description Horizontal scrolling carousel built on Embla Carousel.
+ * Provides previous/next navigation and composable item slots.
+ */
 import * as React from "react"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,

@@ -1,19 +1,40 @@
+/**
+ * Root Layout — app/layout.tsx
+ *
+ * The top-level layout that wraps every page in the application.
+ * Responsibilities:
+ *   1. Loads Google Fonts (Geist Sans + Geist Mono) via next/font
+ *   2. Sets page metadata (title, description) for SEO / social sharing
+ *   3. Injects a theme-color <meta> tag script that syncs with dark/light mode
+ *   4. Wraps all children in <ClientProviders> for theme, auth session, and toasts
+ *
+ * This is a Server Component — it renders on the server and streams HTML to the client.
+ * Client-side providers (ThemeProvider, SessionProvider) are isolated in <ClientProviders>.
+ */
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ClientProviders } from "@/components/client-providers";
 
 import "./globals.css";
 
+/** SEO metadata — appears in browser tabs, search results, and social cards */
 export const metadata: Metadata = {
   metadataBase: new URL("https://chat.vercel.ai"),
   title: "Nak Tahu AI — Malaysia's AI | Speak Malaysian, Think Lokal",
   description: "Nak Tahu AI is Malaysia's AI assistant that understands Bahasa Melayu, English, and Manglish. Speak Malaysian, Think Lokal.",
 };
 
+/** Viewport settings — prevents mobile Safari from auto-zooming on input focus */
 export const viewport = {
   maximumScale: 1, // Disable auto-zoom on mobile Safari
 };
 
+/* ─── Font Loading ─────────────────────────────────────────────────
+   next/font downloads fonts at build time and self-hosts them,
+   avoiding external requests and layout shift (FOUT).
+   The CSS variables (--font-geist, --font-geist-mono) are
+   referenced in globals.css via @theme { --font-sans / --font-mono }.
+   ─────────────────────────────────────────────────────────────────── */
 const geist = Geist({
   subsets: ["latin"],
   display: "swap",
@@ -26,6 +47,12 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
 });
 
+/* ─── Theme Color Script ───────────────────────────────────────────
+   Inline script that runs before React hydrates. It watches the
+   <html> element's "class" attribute for "dark" (toggled by next-themes)
+   and updates the <meta name="theme-color"> accordingly.
+   This controls the browser chrome / address bar color on mobile.
+   ─────────────────────────────────────────────────────────────────── */
 const LIGHT_THEME_COLOR = "hsl(0 0% 100%)";
 const DARK_THEME_COLOR = "hsl(240deg 10% 3.92%)";
 const THEME_COLOR_SCRIPT = `\
@@ -55,6 +82,8 @@ export default function RootLayout({
     <html
       className={`${geist.variable} ${geistMono.variable}`}
       lang="en"
+      // Suppresses hydration mismatch warnings caused by next-themes
+      // adding "dark" class before React hydrates
       suppressHydrationWarning
     >
       <head>
@@ -66,6 +95,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        {/* ClientProviders wraps ThemeProvider + SessionProvider + Toaster */}
         <ClientProviders>{children}</ClientProviders>
       </body>
     </html>

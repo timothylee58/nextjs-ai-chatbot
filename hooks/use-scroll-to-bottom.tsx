@@ -1,3 +1,14 @@
+/**
+ * @fileoverview Hook that auto-scrolls a chat container to the bottom when new
+ * messages arrive.
+ *
+ * Attaches a `MutationObserver` and `ResizeObserver` to the container element
+ * so that any DOM or size change triggers an automatic scroll — but only when
+ * the user is already at (or near) the bottom. Manual scrolling by the user is
+ * respected: if the user scrolls up, auto-scroll is paused until they return
+ * to the bottom. Exposes `onViewportEnter` / `onViewportLeave` callbacks for
+ * integration with intersection-based visibility detection.
+ */
 import { useCallback, useEffect, useRef, useState } from "react";
 
 export function useScrollToBottom() {

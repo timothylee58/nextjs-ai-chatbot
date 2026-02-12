@@ -1,3 +1,9 @@
+/**
+ * @module diffview
+ * @description Side-by-side diff viewer for document version comparison. Uses
+ * ProseMirror to render two versions of a document with highlighted additions
+ * and deletions, enabling users to review changes between artifact versions.
+ */
 import OrderedMap from "orderedmap";
 import {
   DOMParser,

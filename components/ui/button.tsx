@@ -1,3 +1,8 @@
+/**
+ * @module Button
+ * @description Button component with multiple variants (default, destructive, outline, ghost, link)
+ * and sizes. Supports polymorphism via Radix Slot.
+ */
 import { cva, type VariantProps } from "class-variance-authority";
 import { Slot as SlotPrimitive } from "radix-ui";
 import * as React from "react";

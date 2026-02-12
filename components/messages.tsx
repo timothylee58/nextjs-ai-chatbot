@@ -1,3 +1,9 @@
+/**
+ * @module messages
+ * @description Message list component. Maps an array of chat messages to
+ * individual Message components, handles auto-scrolling to new messages,
+ * and provides a scroll-to-bottom button when the user has scrolled up.
+ */
 import type { UseChatHelpers } from "@ai-sdk/react";
 import equal from "fast-deep-equal";
 import { ArrowDownIcon } from "lucide-react";

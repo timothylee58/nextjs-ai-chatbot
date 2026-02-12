@@ -1,5 +1,10 @@
 "use client"
 
+/**
+ * @module Tooltip
+ * @description Tooltip popover that appears on hover/focus, built on Radix UI.
+ * Provides a Provider, Trigger, and Content for composable usage.
+ */
 import * as React from "react"
 import { Tooltip as TooltipPrimitive } from "radix-ui"
 

@@ -1,3 +1,9 @@
+/**
+ * @module sheet-editor
+ * @description Spreadsheet editor component for sheet artifacts. Provides a
+ * tabular data editing interface with CSV parsing/serialization, theme-aware
+ * styling, and support for adding/removing rows and columns.
+ */
 "use client";
 
 import { useTheme } from "next-themes";

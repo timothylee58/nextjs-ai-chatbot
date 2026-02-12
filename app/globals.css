@@ -1,13 +1,35 @@
+/*
+ * Global Stylesheet — app/globals.css
+ *
+ * This is the single CSS entry point for the entire application.
+ * It's imported by app/layout.tsx and applies to all routes.
+ *
+ * Structure:
+ *   1. Tailwind CSS v4 + plugin imports
+ *   2. Design tokens (CSS custom properties) — light & dark mode
+ *   3. Tailwind @theme mapping (connects tokens to Tailwind utilities)
+ *   4. Base layer resets and defaults
+ *   5. Custom utility classes
+ *   6. Component-specific styles (CodeMirror editor, ProseMirror, scrollbars)
+ *   7. NexusChat Malaysian-themed component styles (gradients, animations)
+ */
+
+/* ─── Tailwind CSS v4 Core ─────────────────────────────────────────
+   Imports the Tailwind engine which processes all utility classes.
+   KaTeX provides math equation rendering styles (LaTeX support).
+   ─────────────────────────────────────────────────────────────────── */
 @import "tailwindcss";
 @import "katex/dist/katex.min.css";
 
-/* include utility classes in streamdown */
+/* Tell Tailwind to scan streamdown's output for utility classes it uses */
 @source '../node_modules/streamdown/dist/index.js';
 
-/* custom variant for setting dark mode programmatically */
+/* Dark mode is toggled by adding .dark class to <html> (via next-themes),
+   not by @media (prefers-color-scheme) — this allows manual toggle */
 @custom-variant dark (&:is(.dark, .dark *));
 
-/* include plugins */
+/* Tailwind plugins: animate provides transition/animation utilities,
+   typography provides prose styling for rendered markdown content */
 @plugin "tailwindcss-animate";
 @plugin "@tailwindcss/typography";
 

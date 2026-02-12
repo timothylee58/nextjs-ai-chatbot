@@ -1,3 +1,9 @@
+/**
+ * @module message-editor
+ * @description Inline message editor for editing previously sent messages.
+ * Allows users to modify their sent messages and resubmit them, triggering
+ * a new AI response from the edited content.
+ */
 "use client";
 
 import type { UseChatHelpers } from "@ai-sdk/react";

@@ -1,3 +1,9 @@
+/**
+ * @module suggestion
+ * @description Inline suggestion chip in the document editor. Displays AI-
+ * generated edit suggestions as hoverable/clickable overlays on the document,
+ * allowing users to accept or reject proposed changes.
+ */
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";

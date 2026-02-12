@@ -1,5 +1,10 @@
 "use client"
 
+/**
+ * @module Label
+ * @description Form label component built on Radix UI Label.
+ * Supports variant styling via class-variance-authority.
+ */
 import * as React from "react"
 import { Label as LabelPrimitive } from "radix-ui"
 import { cva, type VariantProps } from "class-variance-authority"

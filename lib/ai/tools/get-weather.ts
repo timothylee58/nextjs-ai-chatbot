@@ -1,3 +1,12 @@
+/**
+ * @file get-weather.ts
+ * @description AI tool definition for fetching current weather data. Accepts either
+ * a city name (geocoded via Open-Meteo's geocoding API) or latitude/longitude
+ * coordinates, then retrieves current temperature, hourly forecasts, and sunrise/
+ * sunset times from the Open-Meteo weather API. Requires user approval before
+ * execution (needsApproval: true).
+ */
+
 import { tool } from "ai";
 import { z } from "zod";
 

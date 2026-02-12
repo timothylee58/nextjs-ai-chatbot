@@ -1,3 +1,16 @@
+/**
+ * Chat Layout — app/(chat)/layout.tsx
+ *
+ * Shared layout for all chat routes (new chat + existing chat pages).
+ * Wraps children with:
+ *   1. Pyodide script — in-browser Python runtime for code execution artifacts
+ *   2. DataStreamProvider — React context for real-time AI response streaming
+ *   3. SidebarProvider + AppSidebar — collapsible sidebar with chat history
+ *
+ * The SidebarWrapper is an async Server Component that:
+ *   - Reads the auth session to show user info in the sidebar
+ *   - Reads the sidebar_state cookie to restore open/collapsed state
+ */
 import { cookies } from "next/headers";
 import Script from "next/script";
 import { Suspense } from "react";

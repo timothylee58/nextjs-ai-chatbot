@@ -1,3 +1,13 @@
+/**
+ * Login Page — app/(auth)/login/page.tsx
+ *
+ * Client component that renders the sign-in form.
+ * Uses React 19's useActionState() to call the login server action
+ * and track form submission status (idle → in_progress → success/failed).
+ *
+ * On success: updates the NextAuth session and refreshes the router.
+ * On failure: shows a toast notification with the error.
+ */
 "use client";
 
 import Link from "next/link";

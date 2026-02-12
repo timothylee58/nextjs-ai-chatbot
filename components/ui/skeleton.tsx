@@ -1,3 +1,8 @@
+/**
+ * @module Skeleton
+ * @description Loading skeleton placeholder with pulse animation.
+ * Used as a content placeholder while data is being fetched.
+ */
 import { cn } from "@/lib/utils"
 
 function Skeleton({

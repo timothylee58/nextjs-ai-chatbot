@@ -1,3 +1,13 @@
+/**
+ * @file errors.ts
+ * @description Structured error handling for the Chat SDK. Defines the ChatSDKError
+ * class which produces consistent, typed API error responses. Errors are categorized
+ * by type (bad_request, unauthorized, forbidden, not_found, rate_limit, offline) and
+ * surface (chat, auth, api, database, etc.). Each surface has a configurable visibility
+ * level that controls whether the error details are returned in the HTTP response or
+ * only logged server-side.
+ */
+
 export type ErrorType =
   | "bad_request"
   | "unauthorized"

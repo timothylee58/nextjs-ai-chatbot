@@ -1,5 +1,10 @@
 "use client"
 
+/**
+ * @module Avatar
+ * @description User avatar component with image display and fallback initials.
+ * Built on Radix UI Avatar primitive.
+ */
 import * as React from "react"
 import { Avatar as AvatarPrimitive } from "radix-ui"
 

@@ -1,3 +1,9 @@
+/**
+ * @module image-editor
+ * @description Image editing component for image artifacts. Displays generated
+ * or uploaded images with loading states and provides the editing interface
+ * for image-type artifacts.
+ */
 import cn from "classnames";
 import { LoaderIcon } from "./icons";
 

@@ -1,3 +1,9 @@
+/**
+ * @module toast
+ * @description Toast notification helper component. Wraps the sonner toast
+ * library to provide styled, dismissible toast notifications with support
+ * for custom content, actions, and auto-dismiss behavior.
+ */
 "use client";
 
 import { type ReactNode, useEffect, useRef, useState } from "react";

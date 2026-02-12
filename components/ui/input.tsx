@@ -1,3 +1,8 @@
+/**
+ * @module Input
+ * @description Styled text input field component.
+ * Supports all standard HTML input attributes with consistent theming.
+ */
 import * as React from "react"
 
 import { cn } from "@/lib/utils"

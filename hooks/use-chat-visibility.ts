@@ -1,3 +1,11 @@
+/**
+ * @fileoverview Hook for managing chat visibility (public or private).
+ *
+ * Reads the current visibility from the SWR-cached chat history when available,
+ * falling back to a locally cached value. When the visibility is changed, the
+ * hook optimistically updates the local cache and triggers the
+ * `updateChatVisibility` server action to persist the change on the backend.
+ */
 "use client";
 
 import { useMemo } from "react";

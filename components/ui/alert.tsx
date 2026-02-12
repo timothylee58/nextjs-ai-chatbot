@@ -1,3 +1,8 @@
+/**
+ * @module Alert
+ * @description Styled alert banners for info, warning, and error messages.
+ * Built with class-variance-authority for variant support.
+ */
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 

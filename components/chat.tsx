@@ -1,3 +1,10 @@
+/**
+ * @module chat
+ * @description Main Chat component. Orchestrates the entire chat interface
+ * including the message list, input box, model selector, and artifact panel.
+ * Uses the Vercel AI SDK's useChat hook for streaming AI responses and manages
+ * chat state, message voting, and artifact interactions.
+ */
 "use client";
 
 import { useChat } from "@ai-sdk/react";

@@ -1,3 +1,9 @@
+/**
+ * @module auth-form
+ * @description Reusable email/password authentication form used by both the
+ * login and register pages. Renders labeled input fields and a submit button,
+ * delegating form submission to the provided action handler.
+ */
 import Form from "next/form";
 
 import { Input } from "./ui/input";

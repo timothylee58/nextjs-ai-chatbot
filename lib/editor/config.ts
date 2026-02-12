@@ -1,3 +1,12 @@
+/**
+ * @file config.ts
+ * @description ProseMirror editor configuration. Defines the document schema (extending
+ * the basic ProseMirror schema with list nodes), a heading input rule for markdown-style
+ * heading shortcuts (e.g., "## " to create an h2), and the handleTransaction function
+ * that applies state updates to the editor view and triggers content save callbacks
+ * (with optional debouncing) when the document changes.
+ */
+
 import { textblockTypeInputRule } from "prosemirror-inputrules";
 import { Schema } from "prosemirror-model";
 import { schema } from "prosemirror-schema-basic";

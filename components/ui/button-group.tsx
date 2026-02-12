@@ -1,3 +1,8 @@
+/**
+ * @module ButtonGroup
+ * @description Groups related buttons together with optional separators.
+ * Supports horizontal/vertical orientation and shared variant styling.
+ */
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 

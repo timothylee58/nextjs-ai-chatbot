@@ -1,5 +1,10 @@
 "use client";
 
+/**
+ * @module Sidebar
+ * @description App sidebar with collapsible sections, menu items, and responsive behavior.
+ * Provides context-driven state management for expand/collapse and mobile views.
+ */
 import { cva, type VariantProps } from "class-variance-authority";
 import { PanelLeft } from "lucide-react";
 import { Slot as SlotPrimitive } from "radix-ui";

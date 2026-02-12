@@ -1,3 +1,15 @@
+/**
+ * @fileoverview New Chat Page (route: /)
+ *
+ * Serves as the home page of the application. Generates a fresh UUID for each
+ * new chat session, reads the user's preferred AI model from a cookie (falling
+ * back to the default model), and renders an empty Chat component with
+ * autoResume disabled alongside a DataStreamHandler for managing streamed
+ * AI responses.
+ *
+ * @module app/(chat)/page
+ */
+
 import { cookies } from "next/headers";
 import { Suspense } from "react";
 import { Chat } from "@/components/chat";

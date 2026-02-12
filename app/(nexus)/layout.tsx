@@ -1,3 +1,11 @@
+/**
+ * @file layout.tsx
+ * @description Nexus Layout. The (nexus) route group provides an alternative
+ * layout for the Nexus feature, separate from the main chat layout. It defines
+ * page metadata (title and description) and renders child routes within a
+ * minimal wrapper fragment.
+ */
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

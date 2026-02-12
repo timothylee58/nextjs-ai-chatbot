@@ -1,3 +1,20 @@
+/**
+ * @fileoverview Document CRUD API (route: /api/document)
+ *
+ * Provides RESTful endpoints for the artifact/document editor system:
+ *
+ * - **GET** - Retrieves all versions of a document by ID. Requires ownership.
+ * - **POST** - Saves a new version of a document (content, title, kind).
+ *   Creates the document if it does not exist, or appends a version if it
+ *   does (after verifying ownership).
+ * - **DELETE** - Removes all document versions created after a given
+ *   timestamp, used for undo/rollback workflows. Requires ownership.
+ *
+ * All endpoints require authentication and enforce per-user ownership checks.
+ *
+ * @module app/(chat)/api/document/route
+ */
+
 import { auth } from "@/app/(auth)/auth";
 import type { ArtifactKind } from "@/components/artifact";
 import {

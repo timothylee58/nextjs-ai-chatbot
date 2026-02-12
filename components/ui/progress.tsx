@@ -1,5 +1,10 @@
 "use client"
 
+/**
+ * @module Progress
+ * @description Progress bar component built on Radix UI Progress.
+ * Displays a visual indicator of completion percentage.
+ */
 import * as React from "react"
 import { Progress as ProgressPrimitive } from "radix-ui"
 

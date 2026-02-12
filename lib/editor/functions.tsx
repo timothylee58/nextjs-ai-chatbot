@@ -1,3 +1,12 @@
+/**
+ * @file functions.tsx
+ * @description Editor helper functions for the ProseMirror-based document editor.
+ * Provides buildDocumentFromContent (parses markdown/HTML content into a ProseMirror
+ * document node), buildContentFromDocument (serializes a ProseMirror document back
+ * to markdown), and createDecorations (generates ProseMirror inline highlight
+ * decorations and suggestion widget decorations from a list of UI suggestions).
+ */
+
 "use client";
 
 import { defaultMarkdownSerializer } from "prosemirror-markdown";

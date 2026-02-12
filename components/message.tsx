@@ -1,3 +1,9 @@
+/**
+ * @module message
+ * @description Single chat message component. Renders individual user or
+ * assistant messages with support for multi-part content (text, reasoning,
+ * tool invocations, attachments) and interactive actions like editing and voting.
+ */
 "use client";
 import type { UseChatHelpers } from "@ai-sdk/react";
 import equal from "fast-deep-equal";

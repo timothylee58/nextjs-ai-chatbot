@@ -1,5 +1,10 @@
 "use client"
 
+/**
+ * @module Sheet
+ * @description Slide-out panel from screen edge built on Radix UI Dialog.
+ * Supports top, bottom, left, and right side variants.
+ */
 import * as React from "react"
 import { Dialog as SheetPrimitive } from "radix-ui"
 import { cva, type VariantProps } from "class-variance-authority"

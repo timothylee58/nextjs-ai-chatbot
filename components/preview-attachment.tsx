@@ -1,3 +1,9 @@
+/**
+ * @module preview-attachment
+ * @description Preview component for file attachments before sending. Displays
+ * a thumbnail preview of attached images or a file name for non-image files,
+ * with an optional remove button to discard the attachment.
+ */
 import Image from "next/image";
 import type { Attachment } from "@/lib/types";
 import { Loader } from "./elements/loader";

@@ -1,3 +1,11 @@
+/**
+ * @file models.ts
+ * @description Available AI model definitions for the chat interface. Exports the
+ * default chat model ID, the ChatModel type, and a curated list of models from
+ * multiple providers (Anthropic, OpenAI, Google, xAI) including reasoning models.
+ * Also provides a modelsByProvider grouping for rendering model selection in the UI.
+ */
+
 // Curated list of top models from Vercel AI Gateway
 export const DEFAULT_CHAT_MODEL = "google/gemini-2.5-flash-lite";
 

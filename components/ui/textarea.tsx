@@ -1,3 +1,8 @@
+/**
+ * @module Textarea
+ * @description Multi-line text input component.
+ * Supports all standard HTML textarea attributes with consistent theming.
+ */
 import * as React from "react"
 
 import { cn } from "@/lib/utils"

@@ -1,3 +1,20 @@
+/**
+ * @fileoverview Stream Resume API (route: GET /api/chat/[id]/stream)
+ *
+ * Enables clients to reconnect to an in-progress AI response stream after
+ * page navigation or server-side rendering. Uses Redis-backed resumable
+ * streams to pick up where the stream left off.
+ *
+ * If the resumable stream has already concluded (e.g., generation finished
+ * during SSR), the endpoint falls back to replaying the most recent assistant
+ * message as a transient append -- but only if that message was created within
+ * the last 15 seconds, to avoid replaying stale data.
+ *
+ * Returns 204 if resumable streams are not configured (no Redis).
+ *
+ * @module app/(chat)/api/chat/[id]/stream/route
+ */
+
 import { createUIMessageStream, JsonToSseTransformStream } from "ai";
 import { differenceInSeconds } from "date-fns";
 import { auth } from "@/app/(auth)/auth";

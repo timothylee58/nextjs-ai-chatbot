@@ -1,3 +1,13 @@
+/**
+ * @file 01-core-to-parts.ts
+ * @description Migration helper script for converting the old message format (v1
+ * content-based) to the new parts-based format (v2). This script was used during
+ * the migration from ai SDK v4.3.13 and processes all existing chats in batches,
+ * re-projecting messages through appendResponseMessages to produce the new UI
+ * message parts structure. The code is currently commented out as the migration
+ * has been completed, but is preserved for reference.
+ */
+
 // This is a helper for an older version of ai, v4.3.13
 
 // import { config } from 'dotenv';

@@ -1,3 +1,9 @@
+/**
+ * @module submit-button
+ * @description Submit button with loading state for authentication forms.
+ * Monitors the parent form's pending status via useFormStatus and displays
+ * a loading spinner while the form submission is in progress.
+ */
 "use client";
 
 import { useFormStatus } from "react-dom";

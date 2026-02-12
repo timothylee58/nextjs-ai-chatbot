@@ -1,3 +1,11 @@
+/**
+ * @file constants.ts
+ * @description App-wide constants and environment detection flags. Exports boolean
+ * checks for production, development, and test environments, a regex for identifying
+ * guest user emails, and a pre-hashed dummy password used for timing-safe
+ * authentication comparisons (to prevent timing attacks when a user is not found).
+ */
+
 import { generateDummyPassword } from "./db/utils";
 
 export const isProductionEnvironment = process.env.NODE_ENV === "production";

@@ -1,3 +1,18 @@
+/**
+ * @fileoverview Chat History API (route: /api/history)
+ *
+ * Provides endpoints for managing the authenticated user's chat history:
+ *
+ * - **GET** - Returns a paginated list of the user's chats. Supports
+ *   cursor-based pagination via `starting_after` and `ending_before` query
+ *   parameters (mutually exclusive), with a configurable `limit` (default 10).
+ * - **DELETE** - Removes all chats belonging to the authenticated user.
+ *
+ * All endpoints require authentication.
+ *
+ * @module app/(chat)/api/history/route
+ */
+
 import type { NextRequest } from "next/server";
 import { auth } from "@/app/(auth)/auth";
 import { deleteAllChatsByUserId, getChatsByUserId } from "@/lib/db/queries";

@@ -1,3 +1,9 @@
+/**
+ * @module multimodal-input
+ * @description Chat input box with support for text, file attachments, and
+ * suggested prompts. Provides a textarea with auto-resize, drag-and-drop file
+ * upload, attachment previews, and keyboard shortcuts for submitting messages.
+ */
 "use client";
 
 import type { UseChatHelpers } from "@ai-sdk/react";

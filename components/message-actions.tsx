@@ -1,3 +1,9 @@
+/**
+ * @module message-actions
+ * @description Action buttons displayed on chat messages. Provides controls for
+ * copying message content to clipboard, upvoting/downvoting responses, and
+ * retrying failed or unsatisfactory assistant messages.
+ */
 import equal from "fast-deep-equal";
 import { memo } from "react";
 import { toast } from "sonner";

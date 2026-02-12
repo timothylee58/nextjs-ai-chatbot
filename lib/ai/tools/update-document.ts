@@ -1,3 +1,12 @@
+/**
+ * @file update-document.ts
+ * @description AI tool definition for updating an existing document/artifact. Looks
+ * up the document by ID, clears the current artifact display on the client, delegates
+ * the update to the appropriate document handler based on the document's kind, and
+ * signals completion via the data stream. The updated content is persisted server-side
+ * by the handler.
+ */
+
 import { tool, type UIMessageStreamWriter } from "ai";
 import type { Session } from "next-auth";
 import { z } from "zod";

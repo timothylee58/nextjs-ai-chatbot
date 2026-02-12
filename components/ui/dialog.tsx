@@ -1,5 +1,10 @@
 "use client"
 
+/**
+ * @module Dialog
+ * @description Modal dialog overlay built on Radix UI Dialog.
+ * Includes composable header, footer, title, and description sub-components.
+ */
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { X } from "lucide-react"
