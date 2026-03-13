@@ -1,4 +1,4 @@
-<a href="https://chat.vercel.ai/">
+<a href="https://nextjs-ai-chatbot-six-rose-hppnwwn81y.vercel.app">
   <img alt="Next.js 14 and App Router-ready AI chatbot." src="app/(chat)/opengraph-image.png">
   <h1 align="center">Chat SDK</h1>
 </a>
@@ -8,6 +8,7 @@
 </p>
 
 <p align="center">
+  <a href="https://nextjs-ai-chatbot-six-rose-hppnwwn81y.vercel.app"><strong>Live Demo</strong></a> ·
   <a href="https://chat-sdk.dev"><strong>Read Docs</strong></a> ·
   <a href="#features"><strong>Features</strong></a> ·
   <a href="#model-providers"><strong>Model Providers</strong></a> ·
