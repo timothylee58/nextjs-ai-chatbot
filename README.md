@@ -18,7 +18,7 @@
 
 ## Features
 
-- [Next.js](https://nextjs.org) App Router
+- [Next.js]([https://nextjs.org](https://nextjs-ai-chatbot-six-rose-hppnwwn81y.vercel.app)) App Router
   - Advanced routing for seamless navigation and performance
   - React Server Components (RSCs) and Server Actions for server-side rendering and increased performance
 - [AI SDK](https://ai-sdk.dev/docs/introduction)
